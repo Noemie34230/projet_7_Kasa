@@ -1,0 +1,92 @@
+/* .kasa-dropdow-rectangle{
+    position: absolute;
+    width : 1023px;
+    height: 47px;
+
+*/
+
+.kasa-dropdow-rectangle{
+    background-color: #FF6060;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    /* flex-direction: row; */
+    
+    
+    height: 47px;
+
+    margin-bottom: 31px;
+}
+
+.kasa-title-dropdown{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 142.6%;
+
+    display: flex;
+    align-items: center;
+
+    color: #FFFFFF;
+    padding-left: 18.08px;
+
+   
+}
+
+.kasa-dropdow-closed{
+    
+    background-image: url("../../assets/Vector_haut.png");
+    background-repeat: no-repeat;
+    transform: rotate(180deg);
+    width: 28.92px;
+    height: 28.92px;
+    
+    cursor: pointer;
+    display : flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-right: 16.08px;
+    margin-top: 5px;
+    
+
+    background-color: transparent;
+    border: none;
+   
+    transition: transform 500ms ease-in-out;
+}
+
+.kasa-dropdow-open{
+background-image: url("../../assets/Vector_bas.png");
+transform: rotate(180deg);
+background-repeat: no-repeat; 
+width: 28.92px;
+height: 28.92px;
+
+cursor: pointer;
+display : flex;
+justify-content: flex-end;
+align-items: center;
+margin-right: 16.08px;
+margin-top: 5px;
+
+
+background-color: transparent;
+border: none;
+
+}
+
+.kasa-text{
+    
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 142.6%;
+
+    color: #FF6060;
+    width: 978px;
+
+    margin-left: 18px;
+
+}

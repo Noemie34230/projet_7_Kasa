@@ -1,0 +1,47 @@
+.kasa-body-error{
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    width: 1200px;
+}
+
+.kasa-error-img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 597px;
+    padding-top: 169px;
+}
+
+.kasa-error-title{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 142.6%;
+
+    display: flex;
+    align-items: flex-end;
+
+    color: #FF6060;
+
+    padding-top: 66px;
+}
+
+.kasa-error-back{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 142.6%;
+    
+
+    display: flex;
+    align-items: flex-end;
+    text-decoration-line: underline;
+
+    color: #FF6060;
+
+    padding-top: 233px;
+    padding-bottom: 185px;
+}

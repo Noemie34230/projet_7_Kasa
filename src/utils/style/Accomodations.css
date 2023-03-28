@@ -1,0 +1,52 @@
+/* div{
+    display: inline;
+    
+    width: 100%;
+} */
+.kasa.body.accomodation{
+    display:flex;
+    width : 1240px;
+    
+}
+.kasa-karousel{
+    width : 1240px;
+    height : 415px;
+    border : solid black 2px;
+    border-radius: 25px;
+    
+}
+
+.kasa-title-accomodation{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 142.6%;
+
+    display: flex;
+    align-items: flex-end;
+
+    color: #FF6060;
+}
+
+.kasa-location-accomodation{
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 142.6%;
+
+
+    display: flex;
+    align-items: flex-end;
+
+    color: #FF6060;
+}
+
+.kasa-dropdow-accomodation{
+    display: flex;
+    flex-direction: row;
+    width: 548px;
+    gap: 20px;
+}
+

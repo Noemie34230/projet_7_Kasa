@@ -1,0 +1,54 @@
+.kasa-home-body{
+    width: 100%;
+    max-width: 1240px;
+    /* height: 1095px; */
+    display: flex;
+    flex-direction: column;
+
+}
+
+.kasa-home-section-one{
+    width: 100%;
+    max-width: 1240px;
+    height: 300px;
+    display: flex;
+
+}
+
+.kasa-home-gallery{
+    background-image: url("../../assets/Background-gallery.png") ;
+    display: flex;
+    justify-content: center;
+    width: 1240px;
+    flex-wrap: wrap;
+    gap: 50px ;
+    
+
+}
+
+.kasa-home-title{
+
+
+    
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 142.6%;
+   
+    padding-top: 78px ;   
+    padding-bottom: 77px ; 
+    
+    text-align: center;
+    color: white;
+    background-image: url("../../assets/Mask_Group-paysage.png") ;
+    /* background-size: 100%; */
+    background-repeat: no-repeat;
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+

@@ -1,0 +1,80 @@
+.kasa-header {
+    width: 100%;
+    max-width: 1240px;
+    max-height: 68px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+
+
+}
+
+.kasa-logo {
+    width : 210.32px;
+    height: 68px;
+
+}
+
+
+
+.kasa-nav {
+    width: 100%;
+    max-width : 309px;
+    max-height: 34px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.kasa-a-propos {
+
+    
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 142.6%;
+   
+    
+    display: flex;
+    justify-content: flex-end;
+    
+    color: #FF6060;
+    width : 116px;
+    height: 34px;
+    
+    
+    
+
+
+}
+.lien{
+    text-decoration: none;
+
+}
+
+.lien:hover{
+text-decoration: underline;
+color: #FF6060;
+}
+
+.kasa-accueil {
+
+    
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 142.6%;
+    
+    
+    display: flex;
+    justify-content: flex-end;
+    
+    color: #FF6060;
+    width : 136px;
+    height: 34px;
+    
+  
+}
