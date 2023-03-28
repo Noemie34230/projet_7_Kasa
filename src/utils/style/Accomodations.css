@@ -46,7 +46,7 @@
 .kasa-dropdow-accomodation{
     display: flex;
     flex-direction: row;
-    width: 548px;
+
     gap: 20px;
 }
 
