@@ -1,13 +1,8 @@
-// import paysage from '../../assets/Mask_Group-paysage.png'
-
-import '../../utils/style/Home.css'
-import Card from '../../components/Card'
-import { useEffect, useState } from 'react'
+import { useEffect, useState } from "react"
 
 
 
-
-function Home(){
+function  Data () { 
     const [data, setData] = useState ([])
 
     const getData = () => { 
@@ -24,34 +19,34 @@ function Home(){
     
     }
     useEffect(() =>{
-    getData()
-    },[]);
-
+        getData()
+        },[]);
     return (
-        <div className='kasa-home-body'>
-            <section className='kasa-home-section-one'>
-                <h1 className='kasa-home-title'>Chez vous, partout et ailleurs</h1>
-            
-            </section>
-            <div className='kasa-home-gallery'>
+
+            <div >
 		
-                {data.map(({id, title, cover}) => 
+                {data.map(({id, title, cover,pictures,host}) => 
                 
                 <div key={id}>
                     
-                    <Card 
+                        
                         id = {id}
                         title = {title}
                         cover = {cover}
+                        pictures = {pictures}
+                        host = {host}
                         
-                    />
+                    
                 </div>    
                 )}
             </div>
-        </div>
-    ) 
-    
+        
+    )
 }
 
+export default Data
 
-export default Home
+
+
+
+    

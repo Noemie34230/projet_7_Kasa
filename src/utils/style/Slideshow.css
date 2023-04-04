@@ -1,0 +1,42 @@
+.kasa-slideshow{
+    width : 1240px;
+    height: 415px;
+    border-radius: 25px;
+    
+    position: relative;
+    z-index: 1;
+    margin-top: 10px;
+    object-fit: cover;
+}
+
+.kasa-slideshow-btn-left{
+    background-image: url("../../assets/Vector_pointe_gauche.png");
+    position: absolute;
+    left : 23.36px;
+    top: 156.7px;
+    width : 46.68px;
+    height : 79.2px;
+
+    cursor: pointer;
+    
+    border: none;
+    background-color: transparent;
+    z-index: 2;
+    
+}
+
+.kasa-slideshow-btn-right{
+    background-image: url("../../assets/Vector_pointe_droite.png");
+    position: absolute;
+    right : 23.36px;
+    top: 156.7px;
+    width : 46.68px;
+    height : 79.2px;
+
+    cursor: pointer;
+    
+    border: none;
+    background-color: transparent;
+    z-index: 2;
+}
+

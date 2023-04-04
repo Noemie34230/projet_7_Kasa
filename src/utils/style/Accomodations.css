@@ -3,8 +3,8 @@
     
     width: 100%;
 } */
-.kasa.body.accomodation{
-    display:flex;
+.kasa-body-accomodation{
+   
     width : 1240px;
     
 }
@@ -17,7 +17,7 @@
 }
 
 .kasa-title-accomodation{
-    font-family: 'Montserrat';
+    /* font-family: 'Montserrat'; */
     font-style: normal;
     font-weight: 500;
     font-size: 36px;
@@ -30,7 +30,7 @@
 }
 
 .kasa-location-accomodation{
-    font-family: 'Montserrat';
+    /* font-family: 'Montserrat'; */
     font-style: normal;
     font-weight: 500;
     font-size: 18px;
@@ -50,3 +50,85 @@
     gap: 20px;
 }
 
+.kasa-equipement-ul{
+    padding-left: 20px;
+}
+.kasa-equipement-li{
+    list-style-type: none;
+    
+}
+
+.kasa-tag-ul{
+    
+    display: flex;
+    gap: 20px;
+    padding-left: 0px ;
+
+}
+
+.kasa-tag-li{
+    list-style-type: none;
+    background-color: #FF6060;
+    color: white;
+    width :115px;
+    height : 25px;
+    border-radius: 10px;
+    text-align: center;
+}
+.kasa-top-accomodation{
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+}
+
+.kasa-top-accomodation-one{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+.kasa-titles-accomodation{
+    display: flex;
+    flex-direction: column;
+}
+.kasa-title-accomodation{
+    margin: 0px;
+}
+.kasa-proprio{
+    display: flex;
+    flex-direction: row;
+    gap : 20px;
+}
+
+.kasa-name-proprio{
+    width: 93px;
+    height: 52px;
+    display: flex;
+    flex-direction: column;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 142.6%;
+    width: min-content;
+    text-align: right;
+
+    color: #FF6060;
+
+}
+.kasa-picture-proprio{
+    display: flex;
+    width: 64px;
+    height: 64px;
+    border-radius: 50px;
+}
+
+.kasa-top-accomodation-two{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.kasa-star{
+    width: 24.75px;
+    height : 24px;
+}

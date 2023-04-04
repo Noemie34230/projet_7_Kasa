@@ -1,11 +1,8 @@
-/* .kasa-dropdow-rectangle{
-    position: absolute;
-    width : 1023px;
-    height: 47px;
+.kasa-dropdown{
+    width: 100%;
+}
 
-*/
-
-.kasa-dropdow-rectangle{
+.kasa-dropdown-rectangle{
     background-color: #FF6060;
     border-radius: 5px;
     display: flex;
@@ -19,7 +16,7 @@
 }
 
 .kasa-title-dropdown{
-    font-family: 'Montserrat';
+    /* font-family: 'Montserrat'; */
     font-style: normal;
     font-weight: 500;
     font-size: 24px;
@@ -34,7 +31,7 @@
    
 }
 
-.kasa-dropdow-closed{
+.kasa-dropdown-closed{
     
     background-image: url("../../assets/Vector_haut.png");
     background-repeat: no-repeat;
@@ -56,7 +53,7 @@
     transition: transform 500ms ease-in-out;
 }
 
-.kasa-dropdow-open{
+.kasa-dropdown-open{
 background-image: url("../../assets/Vector_bas.png");
 transform: rotate(180deg);
 background-repeat: no-repeat; 
@@ -78,15 +75,15 @@ border: none;
 
 .kasa-text{
     
-    font-family: 'Montserrat';
+    /* font-family: 'Montserrat'; */
     font-style: normal;
     font-weight: 400;
     font-size: 24px;
     line-height: 142.6%;
 
     color: #FF6060;
-    width: 978px;
+    /* width: 100%; */
 
-    margin-left: 18px;
+    margin: 10px;
 
 }

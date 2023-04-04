@@ -2,69 +2,114 @@ import '../../utils/style/Accomodations.css'
 
 import { useEffect, useState } from 'react'
 
-import Dropdow from "../../components/Dropdow"
-import { useParams } from 'react-router'
-// import Logements from "./../logements.json"
-// import Error from '../../components/Error'
+import Dropdown from "../../components/Dropdown"
+import { useNavigate, useParams } from 'react-router'
+import Slideshow from '../../components/Slideshow';
+import starPink from '../../assets/star_pink.png'
 
 
 
-
-function Accomodation(){
+ function Accomodation(){
 
     const {id} = useParams();
-    console.log(id)
+    
 
+    const navigate = useNavigate();    
+    const [data, setData] = useState ()
+    useEffect(() => {
+        		const getData = async () => {
+        			const res = await fetch("./../logements.json", { method: 'GET' });
+                    const reponse = await res.json();
+        	        
+                    console.log(reponse)
+                    const appart = reponse.find((element => element.id === id));
+                    if (appart===undefined) {
+                        navigate("*", { state: { message: "Il y a eu une erreur" } });
+                    }
+                    reponse.map(() => setData(appart));
+                    console.log(appart)
+
+                    console.log(appart.id)
+
+        		}
+        		getData();
+                //eslint-disable-next-line
+        	    }, []);
+
+    if(!data)return null
+    const imgArray = data && data.pictures;
+
+    const tags = data && data.tags;
+    console.log(tags)
+    const host = data && data.host
+    const name = host.name
+    const numberStarPink = data.rating
+    console.log(numberStarPink)
+    const picture = host.picture
+
+    const title = data && data.title;
+    const localisation = data && data.location;
+    const description = data && data.description;
+    const equipement = data && data.equipments;
+    console.log(equipement)
+    const Equip = () =>(
+        <div >
+          <ul className='kasa-equipement-ul'>{equipement.map((index, value) => <li key={value} className='kasa-equipement-li'> {index} </li>)}</ul>
+        </div>
+      );
+      const Tags = () =>(
+        <div >
+          <ul className='kasa-tag-ul'>{tags.map((index,value) => <li key ={value} className='kasa-tag-li'> {index} </li>)}</ul>
+        </div>
+      );
+console.log(imgArray) 
     
-    
-    let data = []
-    const getData = () => { 
-        fetch("./../logements.json")
-            .then(function(result){
-                
-                return (result.json()) 
-                
-                
-            })
-            .then(function(logements){
-            console.log(logements)
-            let logement = logements.find(element => element.id === id)
-            console.log (logement.title)
-            
-            })
-            .catch((error) =>console.log(error) )
-    
+const n = 4
+
+function Star()
+   { 
+   console.log(n)
+    for(let i=0; i<n ; i++){
+        <div><img src={starPink} className='kasa-star'/></div>
     }
-    useEffect(() =>{
-    getData()
-    },[]);
+} 
+
     
-    console.log(getData)
-        
-       
-
-
-        
-        // const title = logement.title
-        // console.log(title)
-//         logement.map(({id, title, cover}) =>
-//         console.log(id,title,cover)
-// )
-        
-
     return (
         
-        <div className='kasa.body.accomodation' >
-            
-            
+        <div className='kasa-body-accomodation' >
         
-            <img className="kasa-karousel" alt=''/>
-            <h1 className='kasa-title-accomodation'>title</h1>
-            <h2 className='kasa-location-accomodation'>lieu</h2>
+            <Slideshow image={imgArray}/>
+
+            <div className='kasa-top-accomodation'>
+
+                <div className='kasa-top-accomodation-one'>
+
+                    <div className='kasa-titles-accomodation'>
+                        <h1 className='kasa-title-accomodation'>{title}</h1>
+                        
+                        <h2 className='kasa-location-accomodation'>{localisation}</h2>
+                    </div>
+
+                    <div className='kasa-proprio'>
+                        <p className='kasa-name-proprio'>{name} </p>
+
+                        <img src={picture} alt="photo du propriétaire de l'appartement" className='kasa-picture-proprio'/>
+                    </div>
+                </div>
+
+                <div  className='kasa-top-accomodation-two'>
+                    {<Tags/>}
+     
+                    {Star}
+                    <img src={starPink} className='kasa-star'/>
+                </div>
+            </div>
+
             <div className='kasa-dropdow-accomodation'>
                 
-                <Dropdow title="Description"/>
-                <Dropdow title="Equipements"/>
+                <Dropdown title="Description" text={description}/>
+                <Dropdown title="Equipements" text = {<Equip/> }/>
                 
             </div>
 

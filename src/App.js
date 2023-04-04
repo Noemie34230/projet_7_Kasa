@@ -29,11 +29,11 @@ function App() {
 
             <Route path="/about" element={<About/>}/>
               
-           
+            <Route path="/:id" element = {<Accomodation/>}/>
             
             <Route path="*" element= {<Error/>}/>
 
-            <Route path="/:id" element = {<Accomodation/>}/>
+            
               
            
 
