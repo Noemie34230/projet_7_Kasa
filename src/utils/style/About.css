@@ -4,6 +4,7 @@
 }
 
 .kasa-img-about{
+    width: 100%;
     padding: 31px 0px;
    
 }
@@ -13,7 +14,19 @@
     margin-right: 109px;
 }
 
+@media screen and (max-width: 720px) {
 
+
+    .kasa-body-about{
+        width: 100%;
+    
+    }
+
+    .kasa-about{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
 
 /* .kasa-body-about{
     display :flex;

@@ -6,6 +6,7 @@ import Dropdown from "../../components/Dropdown"
 import { useNavigate, useParams } from 'react-router'
 import Slideshow from '../../components/Slideshow';
 import starPink from '../../assets/star_pink.png'
+import starGrey from '../../assets/star_grey.png'
 
 
 
@@ -40,39 +41,54 @@ import starPink from '../../assets/star_pink.png'
     const imgArray = data && data.pictures;
 
     const tags = data && data.tags;
-    console.log(tags)
+    
     const host = data && data.host
     const name = host.name
-    const numberStarPink = data.rating
-    console.log(numberStarPink)
+    const arrayStar = [1,2,3,4,5]
+   
+    const numberStarPink = [data.rating]
+
+    
     const picture = host.picture
 
     const title = data && data.title;
     const localisation = data && data.location;
     const description = data && data.description;
     const equipement = data && data.equipments;
-    console.log(equipement)
+    
     const Equip = () =>(
         <div >
           <ul className='kasa-equipement-ul'>{equipement.map((index, value) => <li key={value} className='kasa-equipement-li'> {index} </li>)}</ul>
         </div>
       );
       const Tags = () =>(
-        <div >
+        <div className='kasa-tag-division'>
           <ul className='kasa-tag-ul'>{tags.map((index,value) => <li key ={value} className='kasa-tag-li'> {index} </li>)}</ul>
         </div>
       );
-console.log(imgArray) 
-    
-const n = 4
 
-function Star()
-   { 
-   console.log(n)
-    for(let i=0; i<n ; i++){
-        <div><img src={starPink} className='kasa-star'/></div>
-    }
-} 
+    
+
+
+        const Star = () =>(
+            
+            <div>
+                
+            {arrayStar.map((star) => 
+                    numberStarPink >= star ? (
+                    < img key = {numberStarPink}  src={starPink} className='kasa-star' alt='étoile rose'/>
+
+				
+            
+            ) : (
+                < img src={starGrey} className='kasa-star' alt='étoile grise'/>
+
+            )
+            )}
+
+            </div>
+        )
+        
 
     
     return (
@@ -94,15 +110,17 @@ function Star()
                     <div className='kasa-proprio'>
                         <p className='kasa-name-proprio'>{name} </p>
 
-                        <img src={picture} alt="photo du propriétaire de l'appartement" className='kasa-picture-proprio'/>
+                        
+                        <img src={picture} alt="propriétaire de l'appartement" className='kasa-picture-proprio'/>
                     </div>
                 </div>
 
                 <div  className='kasa-top-accomodation-two'>
                     {<Tags/>}
-     
-                    {Star}
-                    <img src={starPink} className='kasa-star'/>
+                    {<Star/>}
+                    
+                    
+                    
                 </div>
             </div>
 

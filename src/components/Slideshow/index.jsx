@@ -35,13 +35,17 @@ function Slideshow (props){
                 <button className="kasa-slideshow-btn-right" onClick={prevImage}> </button> )}
 
             <div>
+                  <p className='kasa-slideshow-number-image'>{isData+1}/{length}</p>
                 {sourceImage.map((image, index) => (  				
                   <div key={index}>
 
-                {index === isData && <img src= {image} className='kasa-slideshow'/>	}
+                {index === isData && <img src= {image} className='kasa-slideshow'alt='logement à louer'/>	}
+                
                           
                   </div>
-                 ))} 
+
+                
+                ))} 
             </div>
             
     </div>

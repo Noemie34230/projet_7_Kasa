@@ -5,16 +5,16 @@
 } */
 .kasa-body-accomodation{
    
-    width : 1240px;
+    width : 100%;
     
 }
-.kasa-karousel{
+/* .kasa-karousel{
     width : 1240px;
     height : 415px;
     border : solid black 2px;
     border-radius: 25px;
     
-}
+} */
 
 .kasa-title-accomodation{
     /* font-family: 'Montserrat'; */
@@ -69,11 +69,14 @@
 .kasa-tag-li{
     list-style-type: none;
     background-color: #FF6060;
+    padding:5px;
+    font-size: 14px;
     color: white;
     width :115px;
-    height : 25px;
+    /* height : 25px; */
     border-radius: 10px;
     text-align: center;
+    /* margin-bottom: 24px; */
 }
 .kasa-top-accomodation{
     display: flex;
@@ -96,9 +99,14 @@
     margin: 0px;
 }
 .kasa-proprio{
-    display: flex;
-    flex-direction: row;
-    gap : 20px;
+    
+    
+    /* position: absolute;  
+    
+    right: -510px; */
+      display: flex;
+      flex-direction: row;
+      gap: 20px;
 }
 
 .kasa-name-proprio{
@@ -131,4 +139,73 @@
 .kasa-star{
     width: 24.75px;
     height : 24px;
+    padding-right: 15.25px;
 }
+
+@media screen and (max-width: 720px) {
+
+    .kasa-dropdow-accomodation{
+        
+        flex-direction: column;
+    
+    }
+
+    .kasa-top-accomodation-one {
+        position: relative;
+        flex-direction: column;
+        height: 80px;
+        
+        
+    }
+
+    .kasa-top-accomodation-two {
+        
+        flex-direction: column;
+    }
+
+    .kasa-proprio{
+        position: absolute;
+        bottom: -120px;
+        right: 10px;
+      
+    }
+    .kasa-name-proprio{
+        font-size: 12px;
+    }
+    .kasa-picture-proprio{
+        width: 32px;
+        height: 32px;
+        margin-top: 12px;
+    }
+    .kasa-title-accomodation{
+        font-size: 18px;
+    }
+    .kasa-location-accomodation{
+        font-size: 14px;
+    }
+    .kasa-tag-li{
+        font-size: 10px;
+    }
+    .kasa-star{
+        width: 13.41px;
+        height: 13px;
+        gap: 6.59px;
+    }
+}
+/* @media screen and (max-width: 600px) {
+    .kasa-proprio{
+        transform: translate(400px, 60px);
+        transition: transform 250ms ease-in-out; 
+        
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+    .kasa-proprio{
+        transform: translate(225px, 60px);
+        transition: transform 250ms ease-in-out; 
+        
+    }
+} */
+
