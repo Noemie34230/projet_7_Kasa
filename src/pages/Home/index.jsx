@@ -1,4 +1,4 @@
-// import paysage from '../../assets/Mask_Group-paysage.png'
+
 
 import '../../utils/style/Home.css'
 import Card from '../../components/Card'
@@ -17,7 +17,7 @@ function Home(){
                 return (result.json()) 
             })
             .then((logements) => setData(logements))
-            
+            // je récupère les données (id, title, cover) grâce à fetch 
 
             .catch((error) =>console.log(error) )
             
@@ -37,7 +37,7 @@ function Home(){
 		
                 {data.map(({id, title, cover}) => 
                 
-                <div key={id}>
+                <div key={id} className='kasa-home-card'>
                     
                     <Card 
                         id = {id}

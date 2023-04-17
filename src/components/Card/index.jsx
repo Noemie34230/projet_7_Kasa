@@ -1,17 +1,13 @@
 
-
-
 import {  NavLink } from 'react-router-dom'
-
-// import Accomodation from '../../pages/Accomodation'
-
 import '../../utils/style/Card.css'
 
 
 function Card(props) {
-   
-    
-    console.log(props)
+
+    // Je récupére toutes les informations (id,title, cover)
+    // que j'ai besoin grâce aux props de la page Home
+
 
     
 return (
@@ -24,15 +20,9 @@ return (
 
             <img src = {props.cover} className='kasa-img-card' alt="Vue du logement" />
 
-           
-            
-
     </NavLink>
     
 )
-
-  
-   
    
 }
 

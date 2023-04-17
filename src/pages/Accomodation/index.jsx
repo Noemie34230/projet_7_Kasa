@@ -12,25 +12,30 @@ import starGrey from '../../assets/star_grey.png'
 
  function Accomodation(){
 
+    // je récupére l'id du logement dans l'URL
     const {id} = useParams();
     
-
     const navigate = useNavigate();    
     const [data, setData] = useState ()
     useEffect(() => {
         		const getData = async () => {
         			const res = await fetch("./../logements.json", { method: 'GET' });
+                    // je récupére tous les logements du fichier logements.json
                     const reponse = await res.json();
         	        
-                    console.log(reponse)
+                    
+                    // je trouve le logement en fonction de son id dans la liste de tous les logements
                     const appart = reponse.find((element => element.id === id));
+
+                    // si l'id ne correspond à aucun des logements, je redirige vers la page erreur
                     if (appart===undefined) {
                         navigate("*", { state: { message: "Il y a eu une erreur" } });
                     }
-                    reponse.map(() => setData(appart));
-                    console.log(appart)
 
-                    console.log(appart.id)
+                    reponse.map(() => setData(appart));
+                    
+
+                   
 
         		}
         		getData();
@@ -38,57 +43,75 @@ import starGrey from '../../assets/star_grey.png'
         	    }, []);
 
     if(!data)return null
+
+    // je crée des constantes pour récupérer les différentes données...
+    
+    //...les images des logements
     const imgArray = data && data.pictures;
 
-    const tags = data && data.tags;
-    
+    //...le titre
+    const title = data && data.title;
+
+    //...la localisation
+    const localisation = data && data.location;
+
+    //...les informations sur le proprio
     const host = data && data.host
     const name = host.name
-    const arrayStar = [1,2,3,4,5]
-   
-    const numberStarPink = [data.rating]
-
-    
     const picture = host.picture
 
-    const title = data && data.title;
-    const localisation = data && data.location;
-    const description = data && data.description;
-    const equipement = data && data.equipments;
-    
-    const Equip = () =>(
-        <div >
-          <ul className='kasa-equipement-ul'>{equipement.map((index, value) => <li key={value} className='kasa-equipement-li'> {index} </li>)}</ul>
-        </div>
-      );
-      const Tags = () =>(
+
+    //...les mots-clés
+    const tags = data && data.tags;
+
+    //j'itère sur le tableau tags grâce à map() pour récupérer les différents mots-clés
+    const Tags = () =>(
         <div className='kasa-tag-division'>
           <ul className='kasa-tag-ul'>{tags.map((index,value) => <li key ={value} className='kasa-tag-li'> {index} </li>)}</ul>
         </div>
       );
 
-    
+    // ... le nombre d'étoiles
 
+    // je crée un tableau qui fera 5 tours (car le maximum d'étoiles roses par logement est 5)
+    const arrayStar = [1,2,3,4,5]
+   
+    // Je récupère le nombre d'étoiles roses du logement
+    const numberStarPink = [data.rating]
 
-        const Star = () =>(
+    //Tant que le nombre d'étoiles roses est supérieur ou égale à la valeur du tour : l'image renvoyée sera une étoile rose
+    const Star = () =>(
             
-            <div>
-                
-            {arrayStar.map((star) => 
-                    numberStarPink >= star ? (
-                    < img key = {numberStarPink}  src={starPink} className='kasa-star' alt='étoile rose'/>
-
-				
+        <div>
             
-            ) : (
+        {arrayStar.map((star) => 
+                numberStarPink >= star ? (
+                < img  src={starPink} className='kasa-star' alt='étoile rose'/>
+           
+        
+                ) : (
+                    
                 < img src={starGrey} className='kasa-star' alt='étoile grise'/>
 
-            )
-            )}
+                )
+                )}
 
-            </div>
-        )
-        
+        </div>
+    )    
+    
+    // ... la description
+
+    const description = data && data.description;
+    
+    // ... les équipements disponibles    
+    const equipement = data && data.equipments;
+    
+    //j'itère sur le tableau equipement avec map() pour récupérer tous les équipements disponibles
+    const Equip = () =>(
+        < >
+          <ul className='kasa-equipement-ul'>{equipement.map((index, value) => <li key={value} className='kasa-equipement-li'> {index} </li>)}</ul>
+        </>
+      );
 
     
     return (
@@ -110,17 +133,15 @@ import starGrey from '../../assets/star_grey.png'
                     <div className='kasa-proprio'>
                         <p className='kasa-name-proprio'>{name} </p>
 
-                        
                         <img src={picture} alt="propriétaire de l'appartement" className='kasa-picture-proprio'/>
                     </div>
                 </div>
 
                 <div  className='kasa-top-accomodation-two'>
+                    
                     {<Tags/>}
                     {<Star/>}
-                    
-                    
-                    
+
                 </div>
             </div>
 

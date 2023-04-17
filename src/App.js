@@ -2,7 +2,7 @@
 
 import Home from './pages/Home';
 import About from './pages/About';
-import Error from './components/Error';
+import Error from './pages/Error';
 import './App.css';
 import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 
@@ -14,9 +14,6 @@ import Accomodation from './pages/Accomodation';
 
 function App() {
 
-
-
-
   return (
     
     <Router >
@@ -24,8 +21,6 @@ function App() {
           <Routes>
 
             <Route exact path="/" element={<Home/>}/>
-              
-            
 
             <Route path="/about" element={<About/>}/>
               
@@ -33,13 +28,9 @@ function App() {
             
             <Route path="*" element= {<Error/>}/>
 
-            
-              
-           
-
           </Routes>
-          <Footer/>
-      </Router>
+      <Footer/>
+    </Router>
     
   );
 }

@@ -1,83 +1,10 @@
-/* div{
-    display: inline;
-    
-    width: 100%;
-} */
+
 .kasa-body-accomodation{
    
     width : 100%;
     
 }
-/* .kasa-karousel{
-    width : 1240px;
-    height : 415px;
-    border : solid black 2px;
-    border-radius: 25px;
-    
-} */
 
-.kasa-title-accomodation{
-    /* font-family: 'Montserrat'; */
-    font-style: normal;
-    font-weight: 500;
-    font-size: 36px;
-    line-height: 142.6%;
-
-    display: flex;
-    align-items: flex-end;
-
-    color: #FF6060;
-}
-
-.kasa-location-accomodation{
-    /* font-family: 'Montserrat'; */
-    font-style: normal;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 142.6%;
-
-
-    display: flex;
-    align-items: flex-end;
-
-    color: #FF6060;
-}
-
-.kasa-dropdow-accomodation{
-    display: flex;
-    flex-direction: row;
-
-    gap: 20px;
-}
-
-.kasa-equipement-ul{
-    padding-left: 20px;
-}
-.kasa-equipement-li{
-    list-style-type: none;
-    
-}
-
-.kasa-tag-ul{
-    
-    display: flex;
-    gap: 20px;
-    padding-left: 0px ;
-
-}
-
-.kasa-tag-li{
-    list-style-type: none;
-    background-color: #FF6060;
-    padding:5px;
-    font-size: 14px;
-    color: white;
-    width :115px;
-    /* height : 25px; */
-    border-radius: 10px;
-    text-align: center;
-    /* margin-bottom: 24px; */
-}
 .kasa-top-accomodation{
     display: flex;
     flex-direction: column;
@@ -90,23 +17,44 @@
     align-items: flex-start;
     justify-content: space-between;
 }
-
 .kasa-titles-accomodation{
     display: flex;
     flex-direction: column;
 }
+
 .kasa-title-accomodation{
+    font-family: 'Montserrat', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 142.6%;
+
+    display: flex;
+    align-items: flex-end;
+
+    color: #FF6060;
     margin: 0px;
+}
+
+.kasa-location-accomodation{
+    font-family: 'Montserrat', sans-serif; 
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 142.6%;
+
+
+    display: flex;
+    align-items: flex-end;
+
+    color: #FF6060;
 }
 .kasa-proprio{
     
-    
-    /* position: absolute;  
-    
-    right: -510px; */
-      display: flex;
-      flex-direction: row;
-      gap: 20px;
+
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
 }
 
 .kasa-name-proprio{
@@ -136,31 +84,68 @@
     flex-direction: row;
     justify-content: space-between;
 }
+
+.kasa-tag-ul{
+    
+    display: flex;
+    gap: 20px;
+    padding-left: 0px ;
+
+}
+
+.kasa-tag-li{
+    list-style-type: none;
+    background-color: #FF6060;
+    padding:5px;
+    font-size: 14px;
+    color: white;
+    width :115px;
+   
+    border-radius: 10px;
+    text-align: center;
+    
+}
+
+
 .kasa-star{
     width: 24.75px;
     height : 24px;
     padding-right: 15.25px;
 }
 
-@media screen and (max-width: 720px) {
+.kasa-dropdow-accomodation{
+    display: flex;
+    flex-direction: row;
 
-    .kasa-dropdow-accomodation{
-        
-        flex-direction: column;
+    gap: 20px;
+}
+
+.kasa-equipement-ul{
+    margin-top: 0px;
+    padding-left: 0px;
+}
+.kasa-equipement-li{
+    list-style-type: none;
     
-    }
+}
+
+
+
+@media screen and (max-width: 720px) {
 
     .kasa-top-accomodation-one {
         position: relative;
         flex-direction: column;
         height: 80px;
         
-        
     }
 
-    .kasa-top-accomodation-two {
-        
-        flex-direction: column;
+    .kasa-title-accomodation{
+        font-size: 18px;
+    }
+
+    .kasa-location-accomodation{
+        font-size: 14px;
     }
 
     .kasa-proprio{
@@ -177,12 +162,12 @@
         height: 32px;
         margin-top: 12px;
     }
-    .kasa-title-accomodation{
-        font-size: 18px;
+
+    .kasa-top-accomodation-two {
+        
+        flex-direction: column;
     }
-    .kasa-location-accomodation{
-        font-size: 14px;
-    }
+
     .kasa-tag-li{
         font-size: 10px;
     }
@@ -191,21 +176,15 @@
         height: 13px;
         gap: 6.59px;
     }
-}
-/* @media screen and (max-width: 600px) {
-    .kasa-proprio{
-        transform: translate(400px, 60px);
-        transition: transform 250ms ease-in-out; 
+
+    .kasa-dropdow-accomodation{
         
+        flex-direction: column;
+        gap: 0px;
+    
     }
-}
 
 
-@media screen and (max-width: 500px) {
-    .kasa-proprio{
-        transform: translate(225px, 60px);
-        transition: transform 250ms ease-in-out; 
-        
-    }
-} */
+}
+
 

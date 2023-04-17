@@ -8,10 +8,8 @@
     border-radius: 5px;
     display: flex;
     justify-content: space-between;
-    /* flex-direction: row; */
     
     width: 100%;
-    /* height: 47px; */
     position: relative;
     z-index: 2;
     margin-bottom: 31px;
@@ -19,7 +17,7 @@
 }
 
 .kasa-title-dropdown{
-    /* font-family: 'Montserrat'; */
+    font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 24px;
@@ -81,15 +79,13 @@ border: none;
 
 .kasa-text{
     
-    /* font-family: 'Montserrat'; */
+    font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 24px;
     line-height: 142.6%;
 
     color: #FF6060;
-    /* width: 100%; */
-
    
     margin-top: -41px;
     padding: 36px 27px 19px 18px;
@@ -102,17 +98,17 @@ border: none;
 @media screen and (max-width: 720px) {
     .kasa-dropdown{
         height: 100%;
+        
     }
     .kasa-dropdown-rectangle{
         margin-top: 20px;
+        margin-bottom: 10px;
     }
 
     .kasa-title-dropdown{
         font-size: 13px;
     }
-    .kasa-text{
-        font-size: 12px;
-    }
+
     .kasa-dropdown-closed{
         margin-top: auto;
         margin-bottom: auto;
@@ -124,5 +120,8 @@ border: none;
         margin-bottom: auto;
         width: 16px;
         height: 9.14px;
+    }
+    .kasa-text{
+        font-size: 12px;
     }
 }

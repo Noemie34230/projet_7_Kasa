@@ -8,6 +8,7 @@ function About() {
         <div className="kasa-body-about">
             <img src= {paysage} alt="Vue sur un paysage de montagne" className="kasa-img-about"/>
             <div className="kasa-about">
+                {/* J'utilise le composant menu déroulant avec les différents éléments propres à chaque menu */}
                 <Dropdown title='Fiabilité'text={"Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées par nos équipes."}/>
                 <Dropdown title='Respect' text={"La bienveillance fait partie des valeurs fondatrices de Kasa. Tout comportement discriminatoire ou de perturbation du voisinage entraînera une exclusion de notre plateforme."}/>
                 <Dropdown title='Service'text={"Nos équipes se tiennent à votre disposition pour vous fournir une expérience parfaite. N'hésitez pas à nous contacter si vous avez la moindre question."}/>

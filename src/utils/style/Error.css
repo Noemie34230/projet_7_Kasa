@@ -2,7 +2,7 @@
     display:flex;
     align-items: center;
     flex-direction: column;
-    width: 1240px;
+    width: 1400px;
 }
 
 .kasa-error-img{
@@ -14,7 +14,7 @@
 }
 
 .kasa-error-title{
-    /* font-family: 'Montserrat'; */
+    font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 36px;
@@ -29,7 +29,7 @@
 }
 
 .kasa-error-back{
-    /* font-family: 'Montserrat'; */
+    font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 36px;

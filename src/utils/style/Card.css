@@ -1,12 +1,12 @@
 .kasa-card{
     display: flex;
     
-    width: 340px;
+    
     
     height: 340px;
     
     position: relative;
-    /* background-image: url("../../assets/Rectangle-gallery.png"); */
+    
     background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
     border-radius: 10px;
 }
@@ -18,7 +18,7 @@
     top: 78.82%;
     bottom: 5.88%;
     
-    /* font-family: 'Montserrat'; */
+    font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 18px;

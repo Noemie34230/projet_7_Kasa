@@ -1,12 +1,11 @@
 import { useState } from "react";
-// import rectangle from "../../assets/Rectangle_dropdow.png";
 import '../../utils/style/Dropdown.css'
-// import vector from "../../assets/Vector_bas.png";
+
 
 function Dropdown({title, text}){
     const[isOpen, setIsOpen] = useState(true)
 
-    
+    // le menu déroulant est soit  fermé, soit ouvert
 
 
     return isOpen ? (
@@ -30,7 +29,7 @@ function Dropdown({title, text}){
                 </button>
                 
             </div>
-            <p className="kasa-text">{text}</p>
+            <div className="kasa-text">{text}</div>
             
         </div>    
     )

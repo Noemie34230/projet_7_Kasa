@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 
 function Header(){
 
-
+// je fais les liens entre mes différentes pages
     return (
         <div className='kasa-header'>
             <img className='kasa-logo'src = {logo} alt="logo de l'entreprise Kasa" />
@@ -24,3 +24,4 @@ function Header(){
 }
 
 export default Header
+

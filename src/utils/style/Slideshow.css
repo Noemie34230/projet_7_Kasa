@@ -1,5 +1,5 @@
 .kasa-slideshow{
-    width : 1240px;
+    width : 1400px;
     height: 415px;
     border-radius: 25px;
     
@@ -65,7 +65,7 @@
 
     .kasa-slideshow{
         width : 100%;
-        height: 100%;
+        height: 255px;
     }
     .kasa-slideshow-number-image{
         z-index: -1;
