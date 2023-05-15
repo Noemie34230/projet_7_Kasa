@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/projet_7_Kasa/static/css/main.0f416321.css",
+    "main.js": "/projet_7_Kasa/static/js/main.82148d96.js",
+    "static/js/787.977b8431.chunk.js": "/projet_7_Kasa/static/js/787.977b8431.chunk.js",
+    "static/media/Mask_Group-about.png": "/projet_7_Kasa/static/media/Mask_Group-about.d9590614febb1cea1483.png",
+    "static/media/Mask_Group-paysage.png": "/projet_7_Kasa/static/media/Mask_Group-paysage.04e013e3bd97da95a43a.png",
+    "index.html": "/projet_7_Kasa/index.html",
+    "main.0f416321.css.map": "/projet_7_Kasa/static/css/main.0f416321.css.map",
+    "main.82148d96.js.map": "/projet_7_Kasa/static/js/main.82148d96.js.map",
+    "787.977b8431.chunk.js.map": "/projet_7_Kasa/static/js/787.977b8431.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0f416321.css",
+    "static/js/main.82148d96.js"
+  ]
+}
